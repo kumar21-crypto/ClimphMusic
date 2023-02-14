@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activities.AlbumDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageButton
+            android:id="@+id/albumDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@color/black"
+            android:layout_marginLeft="10dp"
+            app:tint="@color/white"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:id="@+id/albumDetailShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_share_24"
+            android:background="@color/black"
+            android:layout_marginRight="30dp"
+            app:tint="@color/white"
+            />
+
+        <ImageButton
+            android:id="@+id/albumDetailMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu"
+            android:background="@color/black"
+            android:layout_marginRight="10dp"
+            app:tint="@color/white"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/albumDetailAlbumImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/albumDetailAlbumName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Pushpa - Part 1"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:lines="2"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/albumDetailSongCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="5 Songs"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:lines="1"
+                />
+
+            <TextView
+                android:id="@+id/albumDetailAlbumType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Album"
+                android:textColor="@color/white"
+                android:lines="1"
+                />
+
+            <TextView
+                android:id="@+id/albumDetailAlbumArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="Devi Sri Prasad"
+                android:textColor="@color/white"
+                android:lines="1"
+                />
+
+
+                <LinearLayout
+                    android:id="@+id/albumDetailAlbumPlay"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/text_play_round"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/baseline_play_arrow_24"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Play"
+                        android:textSize="19sp"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/albumDetailAlbumHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:background="@color/black"
+        android:text="Songs"
+        android:textColor="@color/green_light"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+            <include layout="@layout/search_song_shimmer_layout" />
+
+        </LinearLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/albumDetailAlbumSongsRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/search_song_layout" />
+
+</LinearLayout>

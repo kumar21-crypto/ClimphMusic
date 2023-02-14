@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="3dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/searchSongImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/shimmer_color"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:padding="2dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/searchSongName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@color/shimmer_color"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/searchSongArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/shimmer_color"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/searchSongDownload"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_arrow_down"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/searchSongLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_like"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/searchSongMenu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_menu"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>

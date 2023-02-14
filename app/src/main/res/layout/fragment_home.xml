@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource"
+    tools:context=".Fragments.HomeFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#090909"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Climph Music"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning ,"
+            android:textColor="@color/green_light"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anuruddh"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <SearchView
+            android:id="@+id/search_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.ClimphMusic.SearchView"
+            android:background="@drawable/search_round"
+            android:queryHint="Songs , Albums or Artists"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:iconifiedByDefault="false"
+            android:clickable="true"
+            android:searchIcon="@drawable/ic_search"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/idTVPlayListHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:padding="10dp"
+            android:text="Top Playlists"
+            android:textColor="@color/green_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_playlist"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVPlayLists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:padding="4dp"
+            tools:listitem="@layout/album_rv_modal" />
+
+        <TextView
+            android:id="@+id/idTVPopularHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:background="@color/black"
+            android:text="Popular Albums"
+            android:textColor="@color/green_light"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_album"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <!-- recycler view for popular albums-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVPopularAlbums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:padding="4dp"
+            tools:listitem="@layout/album_rv_modal" />
+
+        <TextView
+            android:id="@+id/idTVTopChartHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:background="@color/black"
+            android:text="Top Charts"
+            android:textColor="@color/green_light"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_charts"
+            android:layout_margin="10dp"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVTopCharts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:padding="4dp"
+            tools:listitem="@layout/album_rv_modal" />
+
+        <TextView
+            android:id="@+id/idTVTrendingHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:padding="10dp"
+            android:text="Trending"
+            android:textColor="@color/green_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_trending"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+                <include layout="@layout/album_shimmer_layout"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVTrendingAlbums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:padding="4dp"
+            tools:listitem="@layout/album_rv_modal" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</FrameLayout>

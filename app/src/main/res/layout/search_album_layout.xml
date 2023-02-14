@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="3dp"
+        app:cardCornerRadius="8dp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/searchAlbumImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:padding="2dp"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/searchAlbumName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu Maan Meri Jaan"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/searchAlbumSongCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 Song"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/searchAlbumDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2022 Hindi Album King"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/searchAlbumSongDownload"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_arrow_down"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>
